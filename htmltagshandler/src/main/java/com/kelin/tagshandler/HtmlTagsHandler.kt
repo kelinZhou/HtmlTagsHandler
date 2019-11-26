@@ -157,7 +157,7 @@ class HtmlTagsHandler private constructor(private var onTextClickListener: ((fla
             tagInfo.size = when {
                 size.endsWith("sp", true) -> Integer.parseInt(size.replace("sp", "", true))
                 size.endsWith("px", true) -> {
-                    tagInfo.hasUnderline = false
+                    tagInfo.sizeDip = false
                     Integer.parseInt(size.replace("px", "", true))
                 }
                 else -> try {
